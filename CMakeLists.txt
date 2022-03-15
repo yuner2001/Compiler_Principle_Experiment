@@ -4,8 +4,12 @@ project(GrammarClassifier)
 include(CTest)
 enable_testing()
 
-add_executable(GrammarClassifier main.cpp)
 
-set(CPACK_PROJECT_NAME ${PROJECT_NAME})
-set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
-include(CPack)
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_BINARY_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
+file(GLOB SRC_LIST "*.cpp" "src/*.cpp")
+add_executable(GrammarClassifier ${SRC_LIST})
+

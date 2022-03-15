@@ -1,7 +1,27 @@
 [
 {
   "directory": "C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build",
-  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -g -o CMakeFiles\\GrammarClassifier.dir\\main.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\main.cpp",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/include -g -o CMakeFiles\\GrammarClassifier.dir\\main.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\main.cpp",
   "file": "C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\main.cpp"
+},
+{
+  "directory": "C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/include -g -o CMakeFiles\\GrammarClassifier.dir\\src\\global.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\global.cpp",
+  "file": "C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\global.cpp"
+},
+{
+  "directory": "C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/include -g -o CMakeFiles\\GrammarClassifier.dir\\src\\grammar.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\grammar.cpp",
+  "file": "C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\grammar.cpp"
+},
+{
+  "directory": "C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/include -g -o CMakeFiles\\GrammarClassifier.dir\\src\\grammar_classifier.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\grammar_classifier.cpp",
+  "file": "C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\grammar_classifier.cpp"
+},
+{
+  "directory": "C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build",
+  "command": "C:\\MinGW\\bin\\mingw32-g++.exe -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build -IC:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/include -g -o CMakeFiles\\GrammarClassifier.dir\\src\\input_handle.cpp.obj -c C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\input_handle.cpp",
+  "file": "C:\\Users\\qiaqia\\Desktop\\work\\20220312\\GrammarClassifier\\src\\input_handle.cpp"
 }
 ]

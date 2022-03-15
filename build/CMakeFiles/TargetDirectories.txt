@@ -27,8 +27,6 @@ C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/Continu
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/ContinuousMemCheck.dir
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/ContinuousSubmit.dir
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/GrammarClassifier.dir
-C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/package.dir
-C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/package_source.dir
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/test.dir
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/edit_cache.dir
 C:/Users/qiaqia/Desktop/work/20220312/GrammarClassifier/build/CMakeFiles/rebuild_cache.dir

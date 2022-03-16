@@ -1,12 +1,11 @@
 #pragma once
 #include<set>
-#include<map>
+#include<vector>
 #include<string>
 #include<utility>
 #include"global.h"
 
 class Grammar{
-    friend class InputHandler;
     public:
         Grammar();
         Grammar_type getType();
@@ -15,10 +14,14 @@ class Grammar{
         void AddAP(std::pair<std::string,std::string> imp);
         void setS(std::string s);
         void setType(Grammar_type g);
+        std::set<std::string> getVt();
+        std::set<std::string> getVn();
+        std::vector<std::pair<std::string,std::string>> getP();
+        std::string getS();
     private:
         std::set<std::string> terminal_set;
         std::set<std::string> none_terminal_set;
-        std::map<std::string,std::string> p;
+        std::vector<std::pair<std::string,std::string>> p;
         std::string s;
         Grammar_type gt;
 };

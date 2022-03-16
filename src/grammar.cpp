@@ -26,7 +26,7 @@ void Grammar::AddANoneTerminal(std::string nt)
 
 void Grammar::AddAP(std::pair<std::string,std::string> imp)
 {
-    this->p.insert(imp);
+    this->p.push_back(imp);
 }
 
 void Grammar::setS(std::string s)
@@ -38,4 +38,24 @@ void Grammar::setS(std::string s)
 void Grammar::setType(Grammar_type g)
 {
     this->gt = g;
+}
+
+std::set<std::string> Grammar::getVt()
+{
+    return this->terminal_set;
+}
+
+std::set<std::string> Grammar::getVn()
+{
+    return this->none_terminal_set;
+}
+
+std::vector<std::pair<std::string,std::string>> Grammar::getP()
+{
+    return this->p;
+}
+
+std::string Grammar::getS()
+{
+    return this->s;
 }

@@ -4,7 +4,8 @@ InputHandler::InputHandler()
 {
 
 }
-// input format: {{Vt},{}}
+
+// input format: {{Vt},{},P,S}{A->b,C->d...}
 Grammar InputHandler::GetUnclassifiedGrammar(std::string input_string)
 {
     Grammar aGrammar;
@@ -18,20 +19,20 @@ Grammar InputHandler::GetUnclassifiedGrammar(std::string input_string)
     while(*it != '}')
     {
         if(*it != ',')
-            aGrammar.none_terminal_set.insert(std::string(1,*it));
+            aGrammar.AddANoneTerminal(std::string(1,*it));
         it++;
     }
-    it += 2;
+    it += 3;
     // scan terminal set
     while(*it != '}')
     {
         if(*it != ',')
-            aGrammar.terminal_set.insert(std::string(1,*it));
+            aGrammar.AddATerminal(std::string(1,*it));
         it++;
     }
     it += 4;
     // scan S
-    aGrammar.s = *it;
+    aGrammar.setS(std::string(1,*it));
     it+=3;
     // scan the p set
     std::string left_part;
@@ -40,6 +41,8 @@ Grammar InputHandler::GetUnclassifiedGrammar(std::string input_string)
     right_part.clear();
     while(*it != '}')
     {
+        left_part.clear();
+        right_part.clear();
         while(*it != '-')
         {
             left_part.append(1,*it);
@@ -48,9 +51,10 @@ Grammar InputHandler::GetUnclassifiedGrammar(std::string input_string)
         it+=2;
         while(*it != ',' && *it != '}')
         {
-            right_part.append(1,*it);    
+            right_part.append(1,*it);
+            it++;    
         }
-        std::cout<<left_part<<", "<<right_part<<std::endl;
+        aGrammar.AddAP(std::pair<std::string,std::string>(left_part,right_part));
         if(*it == '}')
             break;
         it++;

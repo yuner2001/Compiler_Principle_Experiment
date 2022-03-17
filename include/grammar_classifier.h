@@ -7,5 +7,5 @@
 
 class GrammarClassifier{
     public:
-        void Classify(Grammar &gr);
+        Grammar_type Classify(Grammar &gr);
 };

@@ -6,6 +6,7 @@ InputHandler::InputHandler()
 }
 
 // input format: {{Vt},{},P,S}{A->b,C->d...}
+// ? represents empty epsion
 Grammar InputHandler::GetUnclassifiedGrammar(std::string input_string)
 {
     Grammar aGrammar;

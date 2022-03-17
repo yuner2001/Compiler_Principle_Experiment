@@ -38,4 +38,5 @@ int main(int, char**) {
     String2Type("{{S,B,C,D},{a,b,c},P,S}{S->aSBC,S->aBC,CB->CD,CD->BD,BD->BC,aB->ab,bB->bb,bC->bc,cC->cc}");
     String2Type("{{Z,S,A,B,C},{a,b,c},P,Z}{Z->SC,S->aAc,A->aAc,A->bBb,C->aCb,C->?,B->bB,B->?}");
     String2Type("{{Z,U,V},{0,1},P,Z}{Z->U0,Z->V1,U->Z1,U->1,V->Z0,V->0}");
+    String2Type("{{S,A,B},{a,b},P,S}{S->aB,S->bA,A->a,A->aS,A->bAA,B->b,B->bS,B->aBB}");
 }

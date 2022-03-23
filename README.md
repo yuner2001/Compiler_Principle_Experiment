@@ -12,6 +12,6 @@
 5. {{S,A,B},{a,b},P,S}{S->aB,S->bA,A->a,A->aS,A->bAA,B->b,B->bS,B->aBB} 
  
 (?表示空串)  
-依次对应得识别结果:
+依次对应得识别结果:  
 <img src = 'img/new.png'>
 

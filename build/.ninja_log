@@ -1,7 +1,0 @@
-# ninja log v5
-2	109	6692247961950525	CMakeFiles/GrammarClassifier.dir/src/global.cpp.obj	557dbe84e7c3212d
-8	597	6692247966836231	CMakeFiles/GrammarClassifier.dir/src/input_handle.cpp.obj	844a2f04d2512927
-4	625	6692247967115286	CMakeFiles/GrammarClassifier.dir/main.cpp.obj	d6c1ce916892fb93
-0	697	6692247967832889	CMakeFiles/GrammarClassifier.dir/src/grammar.cpp.obj	1fe0e2c1ee68c755
-5	678	6692247967643514	CMakeFiles/GrammarClassifier.dir/src/grammar_classifier.cpp.obj	ed353c61d3c4bc45
-697	823	6692247969065307	GrammarClassifier.exe	874668ca61aaa0d1

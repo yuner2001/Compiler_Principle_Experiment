@@ -1,15 +1,5 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(GrammarClassifier)
+cmake_minimum_required(VERSION 3.10)
 
-include(CTest)
-enable_testing()
+project(Compiler)
 
-
-include_directories(
-    ${CMAKE_CURRENT_SOURCE_DIR}
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-)
-file(GLOB SRC_LIST "*.cpp" "src/*.cpp")
-add_executable(GrammarClassifier ${SRC_LIST})
-
+add_subdirectory(GrammarClassifier)

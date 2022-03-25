@@ -2,4 +2,5 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Compiler)
 
+add_subdirectory(Compiler)
 add_subdirectory(GrammarClassifier)

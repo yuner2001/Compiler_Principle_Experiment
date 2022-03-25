@@ -1,17 +1,20 @@
 #pragma once
 
-#include <memory>
+#include "token.h"
 #include "../utils/char_utils.h"
 
 namespace Compiler::Token
 {
     using namespace Compiler::CharUtils;
+    using namespace std;
  
     class Scanner
     {
 
     private:
-        std::unique_ptr<CharStream> charStream;
+        unique_ptr<CharStream> charStream;
+        vector<shared_ptr<Token>> tokens;
+        vector<shared_ptr<Identifier>> identifiers;
         CharStream lexemeBuilder;
 
         enum class ScanType
@@ -36,5 +39,6 @@ namespace Compiler::Token
     private:
         void inputChar(Char ch, Char lastCh);
         void saveToken();
+        shared_ptr<Identifier> fetchIdentifier(std::string name);
     };
 } // namespace Compiler::Token

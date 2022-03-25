@@ -1,4 +1,5 @@
 #include <iostream>
+#include "token.h"
 #include "scanner.h"
 
 namespace Compiler::Token
@@ -19,6 +20,12 @@ namespace Compiler::Token
             inputChar(ch, lastCh);
             lastCh = ch;
         }
+        
+        for (auto &&token : tokens)
+        {
+            cout << token->description() << endl;
+        }
+        
     }
 
     void Scanner::inputChar(Char ch, Char lastCh)
@@ -99,27 +106,26 @@ namespace Compiler::Token
     {
         String str = lexemeBuilder.str();
 
-        // TODO：存放到TOKEN表
-
-        if (scanType != ScanType::NoScanning)
-            cout << str << endl;
+        shared_ptr<Token> token;
 
         switch (scanType)
         {
         case ScanType::Integer:
-            /* code */
+            token = std::make_shared<Integer>(str);
             break;
         case ScanType::String:
-            /* code */
+            token = std::make_shared<StringLiteral>(str);
             break;
         case ScanType::Word:
-            /* code */
+            token = PrimitiveType::lookup(str);
+            if (token == nullptr)
+                token = fetchIdentifier(str);
             break;
         case ScanType::Operator:
-            /* code */
+            token = Operator::lookup(str);
             break;
         case ScanType::Punctuation:
-            /* code */
+            token = Punctuation::lookup(str);
             break;
         case ScanType::NoScanning:
             break;
@@ -129,5 +135,26 @@ namespace Compiler::Token
         }
 
         scanType = ScanType::NoScanning;
+        if (token != nullptr)
+            tokens.push_back(token);
+    }
+
+    shared_ptr<Identifier> Scanner::fetchIdentifier(std::string name)
+    {
+        shared_ptr<Identifier> identifier(nullptr);
+        for (auto &id : identifiers)
+        {
+            if (id->name == name)
+            {
+                identifier = id;
+                break;
+            }
+        }
+        if (identifier == nullptr)
+        {
+            identifier = make_shared<Identifier>(name);
+            identifiers.push_back(identifier);
+        }
+        return identifier;
     }
 } // namespace Compiler::Token
